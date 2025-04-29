@@ -315,3 +315,11 @@ Received Import Request.
 Start importing Assets/Models/Material/floor.mat using Guid(b92b99f61b15727479315d588945353d) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '68f9129d96d47aa519327e41c1edfb7a') in 0.0180438 seconds
 Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
 
+========================================================================
+Received Import Request.
+  Time since last request: 6533.487049 seconds.
+  path: Assets/Models/NewAssetsFixed/ExteriorExit.fbx
+  artifactKey: Guid(7ec23edf7306aa640adf0ae6cea9fd9b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/NewAssetsFixed/ExteriorExit.fbx using Guid(7ec23edf7306aa640adf0ae6cea9fd9b) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '28825f5011c0142f713957acc3a10551') in 0.1364877 seconds
+Number of updated asset objects reloaded before import = 34Number of asset objects unloaded after import = 9
+
