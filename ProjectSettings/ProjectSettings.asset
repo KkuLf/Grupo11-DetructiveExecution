@@ -219,7 +219,7 @@ PlayerSettings:
   androidMinAspectRatio: 1
   applicationIdentifier:
     Android: com.BeardedNinjaGames.VRInteractionFramework
-    Standalone: com.Bearded-Ninja-Games.VR-Interaction-Framework
+    Standalone: com.DefaultCompany.DestructiveExecution
   buildNumber:
     Bratwurst: 0
     Standalone: 0
@@ -919,7 +919,7 @@ PlayerSettings:
   qnxGraphicConfPath: 
   apiCompatibilityLevel: 6
   captureStartupLogs: {}
-  activeInputHandler: 2
+  activeInputHandler: 1
   windowsGamepadBackendHint: 0
   cloudProjectId: 8019570a-b686-4a38-943f-5ac77c2eef2d
   framebufferDepthMemorylessMode: 0
