@@ -6,7 +6,6 @@ public class MenuManager : MonoBehaviour
     public void CargarEscena(string nombreEscena)
     {
         SceneManager.LoadScene(nombreEscena);
-        
     }
 
     public void SalirDelJuego()
@@ -14,9 +13,9 @@ public class MenuManager : MonoBehaviour
         Application.Quit();
 
         // Solo para pruebas en editor
-#if UNITY_EDITOR
-        UnityEditor.EditorApplication.isPlaying = false;
-#endif
+        #if UNITY_EDITOR
+                UnityEditor.EditorApplication.isPlaying = false;
+        #endif
     }
 }
 

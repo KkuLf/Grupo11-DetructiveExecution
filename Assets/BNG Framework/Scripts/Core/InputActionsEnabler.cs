@@ -5,7 +5,7 @@ public class InputActionsEnabler : MonoBehaviour
 {
     public InputActionAsset inputActions;
 
-    void OnEnable()
+    void Update()
     {
         if (inputActions != null)
             inputActions.Enable();
