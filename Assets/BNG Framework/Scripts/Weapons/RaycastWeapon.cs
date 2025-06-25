@@ -377,7 +377,9 @@ namespace BNG {
             // Use projectile if Time has been slowed
             bool useProjectile = AlwaysFireProjectile || (FireProjectileInSlowMo && Time.timeScale < 1);
             if (useProjectile) {
-                GameObject projectile = Instantiate(ProjectilePrefab, MuzzlePointTransform.position, MuzzlePointTransform.rotation) as GameObject;
+                GameObject projectile = ProjectilePool.Instance.GetProjectile();
+                projectile.transform.position = MuzzlePointTransform.position;
+                projectile.transform.rotation = MuzzlePointTransform.rotation;
                 Rigidbody projectileRigid = projectile.GetComponentInChildren<Rigidbody>();
                 projectileRigid.AddForce(MuzzlePointTransform.forward * ShotForce, ForceMode.VelocityChange);
                 
@@ -388,13 +390,23 @@ namespace BNG {
                 }
 
                 // Make sure we clean up this projectile
-                Destroy(projectile, 20);
+                
             }
             else {
                 // Raycast to hit
-                RaycastHit hit;
-                if (Physics.Raycast(MuzzlePointTransform.position, MuzzlePointTransform.forward, out hit, MaxRange, ValidLayers, QueryTriggerInteraction.Ignore)) {
-                    OnRaycastHit(hit);
+                RaycastHit[] hitBuffer = new RaycastHit[1]; 
+                int hitCount = Physics.RaycastNonAlloc(
+                    MuzzlePointTransform.position,
+                    MuzzlePointTransform.forward,
+                    hitBuffer,
+                    MaxRange,
+                    ValidLayers,
+                    QueryTriggerInteraction.Ignore
+                );
+
+                if (hitCount > 0)
+                {
+                    OnRaycastHit(hitBuffer[0]);
                 }
             }
 
