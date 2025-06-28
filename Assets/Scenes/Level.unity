@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 0.914
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 1652404226}
-  m_IndirectSpecularColor: {r: 0.16527699, g: 0.2068953, b: 0.2807833, a: 0.914}
+  m_IndirectSpecularColor: {r: 0.16547382, g: 0.20712513, b: 0.28085923, a: 0.914}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1628,7 +1628,7 @@ Transform:
   m_GameObject: {fileID: 72276572}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -172}
+  m_LocalPosition: {x: 0, y: 0, z: -134.3}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1909,7 +1909,7 @@ Transform:
   m_GameObject: {fileID: 107307127}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 4.8}
+  m_LocalPosition: {x: 0, y: 0, z: -27.4}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -5533,7 +5533,7 @@ MonoBehaviour:
         m_Action: Menu Button
         m_Flags: 0
       m_Flags: 0
-    m_Reference: {fileID: 2142625714928952662, guid: c348712bda248c246b8c49b3db54643f,
+    m_Reference: {fileID: 3994978066732806534, guid: c348712bda248c246b8c49b3db54643f,
       type: 3}
 --- !u!4 &301570843
 Transform:
@@ -28902,7 +28902,7 @@ Transform:
   m_GameObject: {fileID: 1393098790}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: -16.77, y: 0, z: -149.75}
+  m_LocalPosition: {x: -11.5, y: 0, z: -149.75}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -41772,7 +41772,7 @@ Light:
   m_InnerSpotAngle: 1
   m_CookieSize: 10
   m_Shadows:
-    m_Type: 2
+    m_Type: 1
     m_Resolution: 1
     m_CustomResolution: -1
     m_Strength: 1
@@ -44596,7 +44596,7 @@ Transform:
   m_GameObject: {fileID: 1808053826}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 160.38, y: 0, z: -149.75}
+  m_LocalPosition: {x: 47.5, y: 0, z: -149.75}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -47625,6 +47625,7 @@ GameObject:
   - component: {fileID: 1867822504}
   - component: {fileID: 1867822503}
   - component: {fileID: 1867822502}
+  - component: {fileID: 1867822506}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -47715,9 +47716,26 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 40.15, y: 3.81}
+  m_AnchoredPosition: {x: 40.15, y: 5.32}
   m_SizeDelta: {x: 1056, y: 537}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1867822506
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1867822501}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc42784cf147c0c48a680349fa168899, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_IgnoreReversedGraphics: 1
+  m_BlockingObjects: 0
+  m_BlockingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
 --- !u!1 &1868580225
 GameObject:
   m_ObjectHideFlags: 0
