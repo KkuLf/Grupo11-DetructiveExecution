@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.XR.Interaction.Toolkit;
+using UnityEngine.SceneManagement;
 
 public class MenuControllerVR : MonoBehaviour
 {
@@ -32,6 +33,14 @@ public class MenuControllerVR : MonoBehaviour
         menuAbierto = !menuAbierto;
         menuCanvas.SetActive(menuAbierto);
         if (menuAbierto) ColocarFrenteAlJugador();  
+    }
+    public void OnResumeButton()
+    {     
+        if (menuAbierto) ToggleMenu();
+    }
+    public void OnMainMenuButton()
+    {                         
+        SceneManager.LoadScene("MainMenu");     
     }
 
     void LateUpdate()
