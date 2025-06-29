@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 namespace BNG {
-    public class BulletInsert : MonoBehaviour {
+    public class BulletInsert : ManagedUpdateBehavior {
 
         /// <summary>
         /// The weapon we will be adding Bullets to

@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ProjectilePool : MonoBehaviour
+public class ProjectilePool : ManagedUpdateBehavior
 {
     public static ProjectilePool Instance;
 

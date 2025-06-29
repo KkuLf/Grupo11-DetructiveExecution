@@ -4,7 +4,7 @@ using UnityEngine;
 
 
 namespace BNG {
-    public class CustomCenterOfMass : MonoBehaviour {
+    public class CustomCenterOfMass : ManagedUpdateBehavior {
 
         [Header("Define Center of Mass")]
         [Tooltip("Local coordinates to use as center of mass if 'CenterOfMassTransform' is not specified.")]

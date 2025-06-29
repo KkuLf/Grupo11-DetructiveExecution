@@ -474,7 +474,7 @@ namespace BNG {
         public virtual void OnRaycastHit(RaycastHit hit) {
 
             ApplyParticleFX(hit.point, Quaternion.FromToRotation(Vector3.forward, hit.normal), hit.collider);
-
+            Debug.Log(hit.transform.position);
             // push object if rigidbody
             Rigidbody hitRigid = hit.collider.attachedRigidbody;
             if (hitRigid != null) {

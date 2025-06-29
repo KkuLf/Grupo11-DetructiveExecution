@@ -7,7 +7,7 @@ namespace BNG {
     /// <summary>
     /// A simple decal with random scale and rotation
     /// </summary>
-    public class BulletHole : MonoBehaviour {
+    public class BulletHole : ManagedUpdateBehavior {
         public Transform BulletHoleDecal;
 
         public float MaxScale = 1f;
