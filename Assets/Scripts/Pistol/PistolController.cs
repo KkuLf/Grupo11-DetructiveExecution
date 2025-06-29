@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PistolController : MonoBehaviour
+public class PistolController : ObjectWithInteraction
 {
     [SerializeField] private GameObject bulletPrefab;   // The bullet prefab to instantiate
     [SerializeField] private Transform firePoint;       // Where the bullets spawn from
