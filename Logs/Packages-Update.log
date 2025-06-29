@@ -1,0 +1,15 @@
+
+=== Sun Jun 29 16:38:42 2025
+
+Packages were changed.
+Update Mode: updateDependencies
+
+The following packages were added:
+  com.unity.modules.accessibility@1.0.0
+The following packages were updated:
+  com.unity.feature.development from version 1.0.1 to 1.0.2
+  com.unity.feature.vr from version 1.0.0 to 1.0.1
+  com.unity.render-pipelines.universal from version 14.0.12 to 16.0.6
+  com.unity.timeline from version 1.7.7 to 1.8.6
+The following packages were removed:
+  com.unity.textmeshpro@3.0.9
