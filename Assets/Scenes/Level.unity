@@ -5514,6 +5514,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   menuCanvas: {fileID: 1867822501}
+  followTarget: {fileID: 1503539877}
+  distance: 0.5
   menuButtonAction:
     m_UseReference: 1
     m_Action:
@@ -6171,7 +6173,7 @@ PrefabInstance:
     - target: {fileID: 4466324756829235421, guid: a5141b94f9b0fe84195bb6694e6932d4,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2.8186188
+      value: -1.198
       objectReference: {fileID: 0}
     - target: {fileID: 4466324756829235421, guid: a5141b94f9b0fe84195bb6694e6932d4,
         type: 3}
@@ -6181,12 +6183,12 @@ PrefabInstance:
     - target: {fileID: 4466324756829235421, guid: a5141b94f9b0fe84195bb6694e6932d4,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 25.55646
+      value: 16.698
       objectReference: {fileID: 0}
     - target: {fileID: 4466324756829235421, guid: a5141b94f9b0fe84195bb6694e6932d4,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.9482479
+      value: 0.9961755
       objectReference: {fileID: 0}
     - target: {fileID: 4466324756829235421, guid: a5141b94f9b0fe84195bb6694e6932d4,
         type: 3}
@@ -6196,7 +6198,7 @@ PrefabInstance:
     - target: {fileID: 4466324756829235421, guid: a5141b94f9b0fe84195bb6694e6932d4,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.3175311
+      value: 0.087374456
       objectReference: {fileID: 0}
     - target: {fileID: 4466324756829235421, guid: a5141b94f9b0fe84195bb6694e6932d4,
         type: 3}
@@ -6211,7 +6213,7 @@ PrefabInstance:
     - target: {fileID: 4466324756829235421, guid: a5141b94f9b0fe84195bb6694e6932d4,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: -124.851
+      value: 10.025
       objectReference: {fileID: 0}
     - target: {fileID: 4466324756829235421, guid: a5141b94f9b0fe84195bb6694e6932d4,
         type: 3}
@@ -39176,6 +39178,12 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1487824551}
   m_PrefabAsset: {fileID: 0}
+--- !u!4 &1503539877 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2683195716758988408, guid: 4ac7df741a9c0a2418ec19477729ee3d,
+    type: 3}
+  m_PrefabInstance: {fileID: 1459356107}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1518142182
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -47627,7 +47635,7 @@ GameObject:
   - component: {fileID: 1867822502}
   - component: {fileID: 1867822506}
   m_Layer: 5
-  m_Name: Canvas
+  m_Name: MenuCanvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -47716,7 +47724,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 40.15, y: 5.32}
+  m_AnchoredPosition: {x: 40.15, y: 3.56}
   m_SizeDelta: {x: 1056, y: 537}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1867822506

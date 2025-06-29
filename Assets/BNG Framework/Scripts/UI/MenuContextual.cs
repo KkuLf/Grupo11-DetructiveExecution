@@ -4,34 +4,47 @@ using UnityEngine.XR.Interaction.Toolkit;
 
 public class MenuControllerVR : MonoBehaviour
 {
-    public GameObject menuCanvas;   // Canvas del menú
-    private bool menuAbierto = false;
+    [Header("Referencias")]
+    [SerializeField] GameObject menuCanvas;      
+    [SerializeField] Transform followTarget;     
+    [SerializeField] float distance = 0.5f;      
 
-    // Acción asignada en el Input Actions (ejemplo "MenuButton")
+    [Header("Input (Input System)")]
     public InputActionProperty menuButtonAction;
 
-    private void OnEnable()
+    bool menuAbierto;
+
+    void OnEnable()
     {
-        menuButtonAction.action.performed += ToggleMenu;
+        menuButtonAction.action.performed += OnMenuPressed;
         menuButtonAction.action.Enable();
     }
-
-    private void OnDisable()
+    void OnDisable()
     {
-        menuButtonAction.action.performed -= ToggleMenu;
+        menuButtonAction.action.performed -= OnMenuPressed;
         menuButtonAction.action.Disable();
     }
 
-    private void ToggleMenu(InputAction.CallbackContext context)
+    void OnMenuPressed(InputAction.CallbackContext _) => ToggleMenu();
+
+    void ToggleMenu()
     {
         menuAbierto = !menuAbierto;
         menuCanvas.SetActive(menuAbierto);
+        if (menuAbierto) ColocarFrenteAlJugador();  
+    }
 
-        if (menuAbierto)
-        {
-            // Posición y rotación lógica
-            // Ejemplo: frente a la mano o frente al jugador
-        }
+    void LateUpdate()
+    {
+        if (menuAbierto) ColocarFrenteAlJugador();   
+    }
+
+    void ColocarFrenteAlJugador()
+    {
+        if (followTarget == null) return;
+        Vector3 pos = followTarget.position + followTarget.forward * distance;
+        Quaternion rot = Quaternion.LookRotation(followTarget.forward, Vector3.up);
+        menuCanvas.transform.SetPositionAndRotation(pos, rot);
     }
 }
 
