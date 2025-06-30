@@ -6,18 +6,20 @@ public class CustomUpdateManager : MonoBehaviour
 {
     private static List<IUpdateManager> _updateManagers = new List<IUpdateManager>();
 
-    // Update is called once per frame
     void Update()
     {
-        for (int i = 0; i < _updateManagers.Count; i++)
+        foreach (var updater in _updateManagers)
         {
-            _updateManagers[i].CustomUpdate();
+            updater.CustomUpdate();
         }
     }
 
     public static void RegisterUpdate(IUpdateManager newManager)
     {
-        _updateManagers.Add(newManager);
+        if (!_updateManagers.Contains(newManager))
+        {
+            _updateManagers.Add(newManager);
+        }
     }
 
     public static void UnregisterUpdate(IUpdateManager newManager)
@@ -25,3 +27,4 @@ public class CustomUpdateManager : MonoBehaviour
         _updateManagers.Remove(newManager);
     }
 }
+
