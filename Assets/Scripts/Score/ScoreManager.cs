@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
-using UnityEngine.UI;    // Or TMPro if you prefer
+using UnityEngine.UI;    
 
 public class ScoreManager : MonoBehaviour
 {
