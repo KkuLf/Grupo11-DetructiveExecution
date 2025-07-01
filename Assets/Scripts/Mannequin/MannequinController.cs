@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class MannequinController : NeedCustomUpdateObject
@@ -7,6 +5,7 @@ public class MannequinController : NeedCustomUpdateObject
     [SerializeField] private bool Patrol = true;
     [SerializeField] private Transform[] patrolPoints;
     [SerializeField] private float patrolSpeed = 2f;
+    [SerializeField] private ScoreManager scoreManager; // se asigna por Inspector
 
     private int currentPatrolIndex = 0;
     private bool initialized = false;
@@ -21,10 +20,7 @@ public class MannequinController : NeedCustomUpdateObject
         if (initialized) return;
 
         Patrol = true;
-       // ScoreManager.Instance.AddScore(1);
         initialized = true;
-
-        
     }
 
     public override void CustomUpdate()
@@ -40,7 +36,7 @@ public class MannequinController : NeedCustomUpdateObject
     {
         if (other.gameObject.CompareTag("Pebbels"))
         {
-            ScoreManager.Instance.AddScore(-1);
+            scoreManager.AddScore(1); // ahora suma puntos correctamente
             gameObject.SetActive(false);
         }
     }
@@ -52,11 +48,9 @@ public class MannequinController : NeedCustomUpdateObject
 
         Transform targetPoint = patrolPoints[currentPatrolIndex];
         Vector3 direction = (targetPoint.position - transform.position).normalized;
-
         float step = patrolSpeed * Time.deltaTime;
-        transform.position = Vector3.MoveTowards(transform.position, targetPoint.position, step);
 
-        
+        transform.position = Vector3.MoveTowards(transform.position, targetPoint.position, step);
 
         if (direction != Vector3.zero)
         {

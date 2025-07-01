@@ -1,40 +1,37 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using TMPro;
+﻿using TMPro;
 using UnityEngine;
-using UnityEngine.UI;    
+using UnityEngine.SceneManagement;
 
 public class ScoreManager : MonoBehaviour
 {
-    public static ScoreManager Instance { get; private set; }
-
     [Header("UI Settings")]
-    [Tooltip("A UI Text (or TextMeshProUGUI) to show the current score.")]
-    public TextMeshProUGUI scoreText;  // ⇢ change to TextMeshProUGUI if needed
+    public TextMeshProUGUI scoreText;
+
+    [Header("Victory Settings")]
+    public int targetScore = 10; // puntaje para ganar
+    public string victorySceneName = "WinScene"; // nombre de la escena a cargar
 
     private int currentScore = 0;
-
-    void Awake()
-    {
-        if (Instance == null)
-        {
-            Instance = this;
-        }
-        else
-        {
-            Destroy(gameObject);
-        }
-    }
 
     public void AddScore(int amount)
     {
         currentScore += amount;
         UpdateUI();
+
+        if (currentScore >= targetScore)
+        {
+            LoadVictoryScene();
+        }
     }
 
     private void UpdateUI()
     {
         if (scoreText != null)
             scoreText.text = currentScore.ToString();
+    }
+
+    private void LoadVictoryScene()
+    {
+        SceneManager.LoadScene(victorySceneName);
     }
 }

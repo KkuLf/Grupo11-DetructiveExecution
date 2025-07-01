@@ -11,7 +11,7 @@ public class AirdropController : MonoBehaviour
     [SerializeField] float yOffset = 0.2f;         
 
     [Header("Score")]
-    [SerializeField] ScoreManager scoreManager;     
+    //[SerializeField] ScoreManager scoreManager;     
     [SerializeField] int scoreReward = 500;
 
     bool enemySpawned = false;
@@ -32,15 +32,15 @@ public class AirdropController : MonoBehaviour
         Spawn(weaponPrefab);
     }
 
-    public void OnScoreButton()
-    {
-        if (scoreGiven) return;
-        scoreGiven = true;
+    //public void OnScoreButton()
+    //{
+    //    if (scoreGiven) return;
+    //    scoreGiven = true;
 
-        var sm = scoreManager != null ? scoreManager : ScoreManager.Instance;
-        if (sm != null)
-            sm.AddScore(scoreReward);     // tu método existente
-    }
+    //   // var sm = scoreManager != null ? scoreManager : ScoreManager.Instance;
+    //    if (sm != null)
+    //        sm.AddScore(scoreReward);     // tu método existente
+    //}
     void Spawn(GameObject prefab)
     {
         if (prefab == null) return;
