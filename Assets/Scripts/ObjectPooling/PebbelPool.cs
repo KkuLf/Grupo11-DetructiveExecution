@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.Pool;
 
-public class PebbelPool: MonoBehaviour
+public class PebbelPool : ObjectWithInteraction
 {
     [SerializeField] private Pebbel pebbelPrefab;
 

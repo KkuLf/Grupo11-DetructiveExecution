@@ -1,5 +1,4 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class PistolController : ObjectWithInteraction
@@ -13,7 +12,7 @@ public class PistolController : ObjectWithInteraction
 
     private void Awake()
     {
-        bulletPool = new PebbelPool();
+        bulletPool = FindObjectOfType<PebbelPool>();
         bulletPool._bulletSpeed = bulletSpeed;
         bulletPool._spawnPoint = firePoint;
 
@@ -28,7 +27,7 @@ public class PistolController : ObjectWithInteraction
             canShoot = false;
             StartCoroutine("TimeBetweenShots");
         }
-
+        Debug.Log("mesi");
     }
 
     IEnumerator TimeBetweenShots()
