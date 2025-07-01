@@ -32,6 +32,6 @@ public class ScoreManager : MonoBehaviour
 
     private void LoadVictoryScene()
     {
-        SceneManager.LoadScene(victorySceneName);
+       // SceneManager.LoadScene(victorySceneName);
     }
 }
