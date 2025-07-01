@@ -3408,7 +3408,7 @@ GameObject:
   - component: {fileID: 4308429866437044907}
   m_Layer: 0
   m_Name: Mannequin 1
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3471,6 +3471,7 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   patrolSpeed: 2
+  scoreManager: {fileID: 0}
 --- !u!95 &4308429866437044907
 Animator:
   serializedVersion: 7

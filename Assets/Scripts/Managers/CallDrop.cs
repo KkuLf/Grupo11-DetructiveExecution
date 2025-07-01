@@ -2,12 +2,12 @@ using System.Collections;
 using UnityEngine;
 using UnityEngine.XR.Interaction.Toolkit.Interactables;
 
-public class SmokeAndDeactivate : MonoBehaviour
+public class SmokeAndDeactivate : ObjectWithInteraction
 {
     [Header("Referencias")]
     [SerializeField] ParticleSystem smokeEffect;
-    [SerializeField] GameObject objectToDisable;
-    [SerializeField] float delayBeforeDisable = 0f;
+    [SerializeField] GameObject objectToEnable;
+    [SerializeField] float delayBeforeEnable = 1f;
 
     bool alreadyPressed = false;
 
@@ -17,12 +17,14 @@ public class SmokeAndDeactivate : MonoBehaviour
         alreadyPressed = true;              
 
         if (smokeEffect != null) smokeEffect.Play();
-        StartCoroutine(DisableLater());
+        StartCoroutine(EnableLater());
     }
 
-    IEnumerator DisableLater()
+    IEnumerator EnableLater()
     {
-        yield return new WaitForSeconds(delayBeforeDisable);
-        if (objectToDisable != null) objectToDisable.SetActive(false);
+        yield return new WaitForSeconds(delayBeforeEnable);
+
+        if (objectToEnable != null)
+            objectToEnable.SetActive(true);   // ? AHORA se enciende
     }
 }

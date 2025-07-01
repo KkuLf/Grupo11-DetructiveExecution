@@ -1,53 +1,60 @@
+using System.Collections.Generic;
 using UnityEngine;
 
-public class AirdropController : MonoBehaviour
+public class AirdropMaterialController : MonoBehaviour
 {
-    [Header("Prefabs a instanciar")]
-    [SerializeField] GameObject enemyPrefab;
-    [SerializeField] GameObject weaponPrefab;
+    /* ---------- ARMA ---------- */
+    [Header("Arma")]
+    [SerializeField] Renderer weaponRenderer;         
+    [SerializeField] List<Material> weaponMats = new(); 
 
-    [Header("Spawn settings")]
-    [SerializeField] Transform spawnPoint;          
-    [SerializeField] float yOffset = 0.2f;         
+    /* ---------- ENEMIGOS ---------- */
+    [Header("Enemigos")]
+    [SerializeField] string enemyTag = "Enemy";         
+    [SerializeField] List<Material> enemyMats = new();  
 
-    [Header("Score")]
-    //[SerializeField] ScoreManager scoreManager;     
-    [SerializeField] int scoreReward = 500;
+    /* ---------- CARPAS ---------- */
+    [Header("Carpas")]
+    [SerializeField] string tentTag = "Tent";           
+    [SerializeField] List<Material> tentMats = new();   
 
-    bool enemySpawned = false;
-    bool weaponSpawned = false;
-    bool scoreGiven = false;
+    /* ---------- Índices para ciclar ---------- */
+    int weaponIdx, enemyIdx, tentIdx;
 
-    public void OnEnemyButton()
+    /* ---------- BOTONES ---------- */
+    public void OnWeaponMatButton()
     {
-        if (enemySpawned) return;
-        enemySpawned = true;
-        Spawn(enemyPrefab);
+        if (weaponRenderer == null || weaponMats.Count == 0) return;
+
+        weaponRenderer.material = weaponMats[weaponIdx];
+        weaponIdx = (weaponIdx + 1) % weaponMats.Count;
     }
 
-    public void OnWeaponButton()
+    public void OnEnemiesMatButton()
     {
-        if (weaponSpawned) return;
-        weaponSpawned = true;
-        Spawn(weaponPrefab);
+        if (enemyMats.Count == 0) return;
+
+        foreach (Renderer r in GetRenderersByTag(enemyTag))
+            r.material = enemyMats[enemyIdx];
+
+        enemyIdx = (enemyIdx + 1) % enemyMats.Count;
     }
 
-    //public void OnScoreButton()
-    //{
-    //    if (scoreGiven) return;
-    //    scoreGiven = true;
-
-    //   // var sm = scoreManager != null ? scoreManager : ScoreManager.Instance;
-    //    if (sm != null)
-    //        sm.AddScore(scoreReward);     // tu método existente
-    //}
-    void Spawn(GameObject prefab)
+    public void OnTentsMatButton()
     {
-        if (prefab == null) return;
+        if (tentMats.Count == 0) return;
 
-        Vector3 pos = (spawnPoint ? spawnPoint.position : transform.position) +
-                      Vector3.up * yOffset;
+        foreach (Renderer r in GetRenderersByTag(tentTag))
+            r.material = tentMats[tentIdx];
 
-        Instantiate(prefab, pos, Quaternion.identity);
+        tentIdx = (tentIdx + 1) % tentMats.Count;
+    }
+
+    /* ---------- Helper ---------- */
+    IEnumerable<Renderer> GetRenderersByTag(string tag)
+    {
+        foreach (GameObject go in GameObject.FindGameObjectsWithTag(tag))
+            foreach (Renderer r in go.GetComponentsInChildren<Renderer>())
+                yield return r;
     }
 }

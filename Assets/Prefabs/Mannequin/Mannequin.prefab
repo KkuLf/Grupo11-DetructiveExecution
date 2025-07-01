@@ -2008,7 +2008,7 @@ GameObject:
   - component: {fileID: 4230042020372632252}
   m_Layer: 0
   m_Name: Mannequin
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2068,6 +2068,7 @@ MonoBehaviour:
   Patrol: 0
   patrolPoints: []
   patrolSpeed: 2
+  scoreManager: {fileID: 0}
 --- !u!1 &8582118627014530580
 GameObject:
   m_ObjectHideFlags: 0

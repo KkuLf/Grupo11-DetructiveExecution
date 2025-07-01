@@ -708,6 +708,7 @@ Transform:
   - {fileID: 1277487200}
   - {fileID: 1679166347}
   - {fileID: 785835316}
+  - {fileID: 2038526285}
   - {fileID: 1249617921}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1152,6 +1153,11 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1569695499}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!23 &540940545 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 454845875195412555, guid: 5e0ac8a753a085a488a9dbeb6e9ad115, type: 3}
+  m_PrefabInstance: {fileID: 1886189638}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &554431699
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1576,6 +1582,10 @@ PrefabInstance:
     - target: {fileID: 2932892323631419976, guid: 7aa0a301515780a44b2ddf1ecda8ad84, type: 3}
       propertyPath: m_Name
       value: Tent (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2932892323631419976, guid: 7aa0a301515780a44b2ddf1ecda8ad84, type: 3}
+      propertyPath: m_TagString
+      value: Tent
       objectReference: {fileID: 0}
     - target: {fileID: 2932892323631419976, guid: 7aa0a301515780a44b2ddf1ecda8ad84, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -2072,6 +2082,18 @@ PrefabInstance:
       propertyPath: m_InteractionManager
       value: 
       objectReference: {fileID: 1056216075}
+    - target: {fileID: 2625340012483199163, guid: 25c8225463adddf45b161b43f5989760, type: 3}
+      propertyPath: lengthInSec
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 9052959062152411131, guid: 25c8225463adddf45b161b43f5989760, type: 3}
+      propertyPath: objectToEnable
+      value: 
+      objectReference: {fileID: 950226304}
+    - target: {fileID: 9052959062152411131, guid: 25c8225463adddf45b161b43f5989760, type: 3}
+      propertyPath: objectToDisable
+      value: 
+      objectReference: {fileID: 950226304}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2488,6 +2510,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: feda38ecd13b26547ac70dd4cca0bf65, type: 3}
+--- !u!1 &950226304 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1577854166683178105, guid: 954093b05f74fda4a96158d57abb7b00, type: 3}
+  m_PrefabInstance: {fileID: 1679166346}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1004506276
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4709,6 +4736,10 @@ PrefabInstance:
       value: Tent (2)
       objectReference: {fileID: 0}
     - target: {fileID: 2932892323631419976, guid: 7aa0a301515780a44b2ddf1ecda8ad84, type: 3}
+      propertyPath: m_TagString
+      value: Tent
+      objectReference: {fileID: 0}
+    - target: {fileID: 2932892323631419976, guid: 7aa0a301515780a44b2ddf1ecda8ad84, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
@@ -4812,9 +4843,21 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 326249380}
     m_Modifications:
+    - target: {fileID: 504451019678777212, guid: 954093b05f74fda4a96158d57abb7b00, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OnTentsMatButton
+      objectReference: {fileID: 0}
+    - target: {fileID: 504451019678777212, guid: 954093b05f74fda4a96158d57abb7b00, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: AirdropMaterialController, Assembly-CSharp
+      objectReference: {fileID: 0}
     - target: {fileID: 1577854166683178105, guid: 954093b05f74fda4a96158d57abb7b00, type: 3}
       propertyPath: m_Name
       value: Airdrop 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1577854166683178105, guid: 954093b05f74fda4a96158d57abb7b00, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2210839353254809283, guid: 954093b05f74fda4a96158d57abb7b00, type: 3}
       propertyPath: m_LocalScale.y
@@ -4864,12 +4907,89 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2892825523214950428, guid: 954093b05f74fda4a96158d57abb7b00, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: a42fb7c2102b43845bb6ec62b14350c5, type: 3}
     - target: {fileID: 3073023509001442087, guid: 954093b05f74fda4a96158d57abb7b00, type: 3}
       propertyPath: scoreManager
       value: 
       objectReference: {fileID: 1138477165}
+    - target: {fileID: 3073023509001442087, guid: 954093b05f74fda4a96158d57abb7b00, type: 3}
+      propertyPath: weaponRenderer
+      value: 
+      objectReference: {fileID: 540940545}
+    - target: {fileID: 3073023509001442087, guid: 954093b05f74fda4a96158d57abb7b00, type: 3}
+      propertyPath: tentMats.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3073023509001442087, guid: 954093b05f74fda4a96158d57abb7b00, type: 3}
+      propertyPath: enemyMats.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3073023509001442087, guid: 954093b05f74fda4a96158d57abb7b00, type: 3}
+      propertyPath: weaponMats.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3073023509001442087, guid: 954093b05f74fda4a96158d57abb7b00, type: 3}
+      propertyPath: 'tentMats.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 70f8b54b585a2b94682c4f8d5403c72a, type: 2}
+    - target: {fileID: 3073023509001442087, guid: 954093b05f74fda4a96158d57abb7b00, type: 3}
+      propertyPath: 'tentMats.Array.data[1]'
+      value: 
+      objectReference: {fileID: 2100000, guid: a36561f6544e4eb46b370474fa8c5a12, type: 2}
+    - target: {fileID: 3073023509001442087, guid: 954093b05f74fda4a96158d57abb7b00, type: 3}
+      propertyPath: 'tentMats.Array.data[2]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 81415ecdf4c9e374c9f0d88af0adffdd, type: 2}
+    - target: {fileID: 3073023509001442087, guid: 954093b05f74fda4a96158d57abb7b00, type: 3}
+      propertyPath: 'enemyMats.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 70f8b54b585a2b94682c4f8d5403c72a, type: 2}
+    - target: {fileID: 3073023509001442087, guid: 954093b05f74fda4a96158d57abb7b00, type: 3}
+      propertyPath: 'enemyMats.Array.data[1]'
+      value: 
+      objectReference: {fileID: 2100000, guid: a36561f6544e4eb46b370474fa8c5a12, type: 2}
+    - target: {fileID: 3073023509001442087, guid: 954093b05f74fda4a96158d57abb7b00, type: 3}
+      propertyPath: 'enemyMats.Array.data[2]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 81415ecdf4c9e374c9f0d88af0adffdd, type: 2}
+    - target: {fileID: 3073023509001442087, guid: 954093b05f74fda4a96158d57abb7b00, type: 3}
+      propertyPath: 'weaponMats.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 70f8b54b585a2b94682c4f8d5403c72a, type: 2}
+    - target: {fileID: 3073023509001442087, guid: 954093b05f74fda4a96158d57abb7b00, type: 3}
+      propertyPath: 'weaponMats.Array.data[1]'
+      value: 
+      objectReference: {fileID: 2100000, guid: a36561f6544e4eb46b370474fa8c5a12, type: 2}
+    - target: {fileID: 3073023509001442087, guid: 954093b05f74fda4a96158d57abb7b00, type: 3}
+      propertyPath: 'weaponMats.Array.data[2]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 81415ecdf4c9e374c9f0d88af0adffdd, type: 2}
+    - target: {fileID: 3769783384056704920, guid: 954093b05f74fda4a96158d57abb7b00, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OnEnemiesMatButton
+      objectReference: {fileID: 0}
+    - target: {fileID: 3769783384056704920, guid: 954093b05f74fda4a96158d57abb7b00, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: AirdropMaterialController, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 6271814777243612963, guid: 954093b05f74fda4a96158d57abb7b00, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OnWeaponMatButton
+      objectReference: {fileID: 0}
+    - target: {fileID: 6271814777243612963, guid: 954093b05f74fda4a96158d57abb7b00, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: AirdropMaterialController, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 8092987660365216056, guid: 954093b05f74fda4a96158d57abb7b00, type: 3}
+      propertyPath: m_Name
+      value: Tent
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 8589616589450271553, guid: 954093b05f74fda4a96158d57abb7b00, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 954093b05f74fda4a96158d57abb7b00, type: 3}
@@ -5183,23 +5303,35 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 0}
+    m_TransformParent: {fileID: 326249380}
     m_Modifications:
     - target: {fileID: 3777524940891775350, guid: 5e0ac8a753a085a488a9dbeb6e9ad115, type: 3}
       propertyPath: m_Name
       value: Beretta Pistol
       objectReference: {fileID: 0}
+    - target: {fileID: 3777524940891775350, guid: 5e0ac8a753a085a488a9dbeb6e9ad115, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4550788776426224588, guid: 5e0ac8a753a085a488a9dbeb6e9ad115, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.036567003
+      objectReference: {fileID: 0}
+    - target: {fileID: 4550788776426224588, guid: 5e0ac8a753a085a488a9dbeb6e9ad115, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.036567003
+      objectReference: {fileID: 0}
     - target: {fileID: 4550788776426224588, guid: 5e0ac8a753a085a488a9dbeb6e9ad115, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -3.675
+      value: -7.447217
       objectReference: {fileID: 0}
     - target: {fileID: 4550788776426224588, guid: 5e0ac8a753a085a488a9dbeb6e9ad115, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.328
+      value: 0.900688
       objectReference: {fileID: 0}
     - target: {fileID: 4550788776426224588, guid: 5e0ac8a753a085a488a9dbeb6e9ad115, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -5.309
+      value: -5.960501
       objectReference: {fileID: 0}
     - target: {fileID: 4550788776426224588, guid: 5e0ac8a753a085a488a9dbeb6e9ad115, type: 3}
       propertyPath: m_LocalRotation.w
@@ -5419,6 +5551,11 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &2038526285 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4550788776426224588, guid: 5e0ac8a753a085a488a9dbeb6e9ad115, type: 3}
+  m_PrefabInstance: {fileID: 1886189638}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &2074497031 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2855765654445586737, guid: feda38ecd13b26547ac70dd4cca0bf65, type: 3}
@@ -6265,6 +6402,10 @@ PrefabInstance:
       value: Tent
       objectReference: {fileID: 0}
     - target: {fileID: 2932892323631419976, guid: 7aa0a301515780a44b2ddf1ecda8ad84, type: 3}
+      propertyPath: m_TagString
+      value: Tent
+      objectReference: {fileID: 0}
+    - target: {fileID: 2932892323631419976, guid: 7aa0a301515780a44b2ddf1ecda8ad84, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
@@ -6290,7 +6431,6 @@ SceneRoots:
   - {fileID: 1056216076}
   - {fileID: 1455172282}
   - {fileID: 326249380}
-  - {fileID: 1886189638}
   - {fileID: 1275656404}
   - {fileID: 2036487430}
   - {fileID: 237831031}

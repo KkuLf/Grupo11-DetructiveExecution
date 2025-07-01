@@ -6,6 +6,8 @@ TagManager:
   tags:
   - ReloadChamber
   - Pebbels
+  - Enemy
+  - Tent
   layers:
   - Default
   - TransparentFX
