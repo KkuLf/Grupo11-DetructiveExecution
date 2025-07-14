@@ -12,7 +12,7 @@ public class PistolController : ObjectWithInteraction
 
     private void Awake()
     {
-        bulletPool = FindObjectOfType<PebbelPool>();
+        bulletPool = GetComponent<PebbelPool>();
         bulletPool._bulletSpeed = bulletSpeed;
         bulletPool._spawnPoint = firePoint;
 

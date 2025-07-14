@@ -29,7 +29,7 @@ public class PebbelPool : ObjectWithInteraction
     public void SpawnPebbel()
     {
         var pebbel = _pool.Get();
-
-        pebbel.Init(_spawnPoint, _bulletSpeed);
+        Debug.Log(_pool.CountInactive);
+        pebbel.Init(_pool, _spawnPoint, _bulletSpeed);
     }
 }

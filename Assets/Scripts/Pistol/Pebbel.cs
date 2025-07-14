@@ -2,18 +2,21 @@ using System.Collections;
 using UnityEngine;
 using UnityEngine.Pool;
 
-public class Pebbel : PebbelPool
+public class Pebbel : ObjectWithInteraction
 {
     private bool _isActive = false;
 
-    public void Init(Transform shootingPoint, float bulletSpeed)
+    private ObjectPool<Pebbel> _pool;
+
+    public void Init(ObjectPool<Pebbel> pool, Transform shootingPoint, float bulletSpeed)
     {
         transform.position = shootingPoint.position;
         transform.rotation = shootingPoint.rotation;
 
-        gameObject.SetActive(true);
-
         _isActive = true;
+        gameObject.SetActive(_isActive);
+
+        _pool = pool;
 
         Rigidbody rb = GetComponent<Rigidbody>();
 
@@ -45,5 +48,4 @@ public class Pebbel : PebbelPool
         _isActive = false;
         _pool.Release(this);
     }
-
 }
