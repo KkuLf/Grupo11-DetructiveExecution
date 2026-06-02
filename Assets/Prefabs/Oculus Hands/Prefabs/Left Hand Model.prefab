@@ -328,7 +328,6 @@ GameObject:
   m_Component:
   - component: {fileID: 109434732395451517}
   - component: {fileID: 109434732388006827}
-  - component: {fileID: 5832539172792618733}
   m_Layer: 0
   m_Name: Left Hand Model
   m_TagString: Untagged
@@ -375,42 +374,6 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &5832539172792618733
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 109434732395284509}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2afc4dcbbf65fea41b5be3e13b26fbbc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _inputTrigger:
-    m_UseReference: 1
-    m_Action:
-      m_Name: Input Trigger
-      m_Type: 0
-      m_ExpectedControlType: 
-      m_Id: 71db8a83-2691-46e2-9cea-48d839e08e0b
-      m_Processors: 
-      m_Interactions: 
-      m_SingletonActionBindings: []
-      m_Flags: 0
-    m_Reference: {fileID: -4289430672226363583, guid: c348712bda248c246b8c49b3db54643f, type: 3}
-  _inputPinch:
-    m_UseReference: 1
-    m_Action:
-      m_Name: Input Pinch
-      m_Type: 0
-      m_ExpectedControlType: 
-      m_Id: c6658574-ad61-41dc-af0a-e819e10c798c
-      m_Processors: 
-      m_Interactions: 
-      m_SingletonActionBindings: []
-      m_Flags: 0
-    m_Reference: {fileID: 6558622148059887818, guid: c348712bda248c246b8c49b3db54643f, type: 3}
 --- !u!1 &109434732395284511
 GameObject:
   m_ObjectHideFlags: 0
