@@ -140,9 +140,6 @@ PlayerSettings:
   bundleVersion: 0.1
   preloadedAssets:
   - {fileID: 0}
-  - {fileID: -1491542297996764551, guid: 39616d911e22eb14aaf1852b5fcba814, type: 2}
-  - {fileID: 11400000, guid: d573440c8627e744382601a51bcfd793, type: 2}
-  - {fileID: -6343452063773577974, guid: 5383c78cfbba1074eb04f913b7294ced, type: 2}
   metroInputSource: 0
   wsaTransparentSwapchain: 0
   m_HolographicPauseOnTrackingLoss: 1
@@ -850,7 +847,7 @@ PlayerSettings:
   platformArchitecture: {}
   scriptingBackend:
     Android: 1
-    Standalone: 1
+    Standalone: 0
   il2cppCompilerConfiguration: {}
   il2cppCodeGeneration: {}
   il2cppStacktraceInformation: {}
