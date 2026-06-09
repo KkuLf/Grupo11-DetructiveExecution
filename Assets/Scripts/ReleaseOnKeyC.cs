@@ -14,6 +14,7 @@ public class ReleaseOnKeyC : MonoBehaviour
     void Update()
     {
         var kb = Keyboard.current;
+        if (kb == null) return;
 
         if (_holdingInteractor != null && !_grab.isSelected)
             _holdingInteractor = null;
