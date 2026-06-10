@@ -2316,7 +2316,7 @@
                 {
                     "name": "",
                     "id": "5c0fa06c-b670-477f-a95d-eb3b4880e439",
-                    "path": "<XRController>{RightHand}/{Primary2DAxis}",
+                    "path": "",
                     "interactions": "",
                     "processors": "ScaleVector2(y=0),StickDeadzone",
                     "groups": "",
@@ -2349,7 +2349,7 @@
                 {
                     "name": "",
                     "id": "ef10c39a-2987-41bb-bb80-0e476240adaa",
-                    "path": "<XRController>{RightHand}/{Primary2DAxis}",
+                    "path": "",
                     "interactions": "",
                     "processors": "ScaleVector2(x=0),StickDeadzone",
                     "groups": "",
@@ -2360,7 +2360,7 @@
                 {
                     "name": "",
                     "id": "c4b46d7d-8231-4672-83f9-75af565faf57",
-                    "path": "<XRController>{RightHand}/{Primary2DAxis}",
+                    "path": "",
                     "interactions": "",
                     "processors": "StickDeadzone",
                     "groups": "",
@@ -2371,7 +2371,7 @@
                 {
                     "name": "",
                     "id": "4caf4e8d-13e5-4bd6-8f42-b6b99c315ad0",
-                    "path": "<XRController>{RightHand}/{Primary2DAxis}",
+                    "path": "",
                     "interactions": "",
                     "processors": "ScaleVector2(x=0),StickDeadzone",
                     "groups": "",
